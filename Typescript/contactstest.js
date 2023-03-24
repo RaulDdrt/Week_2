@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var contacts_1 = require("./contacts");
+var person_1 = require("./person");
+var contacto1 = new contacts_1.Contacts();
+var persona1 = new person_1.Person("Raquel", 25, "C/ Algo");
+var persona2 = new person_1.Person("David", 62, "Av Santa Cruz");
+var persona3 = new person_1.Person("Pedro", 7, "C/ Pizarro");
+var contactos = [persona1, persona2, persona3];
+contacto1.people = contactos;
+contacto1.printCalendar();

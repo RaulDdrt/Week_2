@@ -1,45 +1,40 @@
-class Person
+export class Person
 
 {
 
-    public name : string;
-    public age : number;
-    private address : string;
+    public name: string;
+    public age: number;
+    private address: string;
 
+    constructor(nombre:string, age:number, address:string){
 
+        this.name = nombre;
+        this.age = age;
+        this.address = address
+    
+    }
 
-constructor(name:string, age:number, address:string)
-{
+    printName():string{
 
-    this.name = name
-    this.age = age
-    this.address = address
+        return this.name
+    }
 
-}
+    yearOfBirth(currentYear:number):number{
 
-printName(){
-    return this.name
-}
+        return currentYear - this.age
+    }
 
-yearOfBirth(currentYear:number):number{
+    setAddress(address:string):void{
 
-    return currentYear - this.age
+        this.address = address
 
-}
+    }
 
+    getAddress():string{
 
+        return this.address
+    }
 
-setAddress(address:string){
-
-    return this.address = address
-
-}
-
-getAddress():string{
-
-    return this.address
-
-
-}
+    
 
 }

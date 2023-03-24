@@ -1,13 +1,24 @@
-var person = /** @class */ (function () {
-    function person(name, age, address) {
-        this.name = name;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Person = void 0;
+var Person = /** @class */ (function () {
+    function Person(nombre, age, address) {
+        this.name = nombre;
         this.age = age;
         this.address = address;
     }
-    person.prototype.printName = function () {
+    Person.prototype.printName = function () {
         return this.name;
     };
-    return person;
+    Person.prototype.yearOfBirth = function (currentYear) {
+        return currentYear - this.age;
+    };
+    Person.prototype.setAddress = function (address) {
+        this.address = address;
+    };
+    Person.prototype.getAddress = function () {
+        return this.address;
+    };
+    return Person;
 }());
-var persona1 = new person("Juan", 33, "C/ Canarias");
-console.log(persona1);
+exports.Person = Person;
